@@ -6,6 +6,11 @@ pipeline{
         sh 'echo "Build completed."'
       }
     }
+    stage('Build status'){
+      steps{
+        sh 'echo "Buid was triggered by GIT SCM."'
+      }
+    }
   }
 }
 
@@ -33,3 +38,6 @@ pipeline{
 // 3. Create a Jenkins in git repo & commit
 // 4. Create Jenkins job to access Jenkinsfile from git repo
 // 5. Test triggers
+
+// Error check: Host key vertification failed.
+// make sure: Dashboard/Manage Jenkins/Security/Git Host Key Verification Configuration -> Accept first connection
