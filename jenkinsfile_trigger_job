@@ -1,0 +1,35 @@
+pipeline{
+  agent any
+  stages{
+    stage('Build'){
+      steps{
+        sh 'echo "Build completed."'
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Popuplar triggers:
+// + git webhook: in the git repository like Github will send adjacent payload whenever there is a new commit in the reopository.
+// + poll SCM: Jenkins will check for commit in Git repository in an interval that you specificed like every 5 minutes.
+// + scheduled jobs: you mentioned date and time like an alarm clock in crown job format and jenkins will make sure your jobs run at that particular time or some intervals that you specific
+// + remote triggers: you can trigger jenkins from anywhere, from a script, from an Ansible playbook. And there are tokens, secrets and URL, you can use to trigger your jenkins jobs.
+// + build after other projects are built: you just selected that after this job is completed, run the particular jobs.
+
+// Hand-on steps:
+// 1. Create git repository on github
+// 2. SSH auth
+// 3. Create a Jenkins in git repo & commit
+// 4. Create Jenkins job to access Jenkinsfile from git repo
+// 5. Test triggers
